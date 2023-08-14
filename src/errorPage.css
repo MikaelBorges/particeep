@@ -1,0 +1,11 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--padding-app));
+}
+
+.error-message {
+  font-style: italic;
+}

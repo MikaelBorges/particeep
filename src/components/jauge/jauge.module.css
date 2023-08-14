@@ -1,0 +1,20 @@
+.jauge {
+  display: flex;
+  height: 0.6rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.likes {
+  background-color: green;
+}
+
+.dislikes {
+  background-color: red;
+}
+
+@media (min-width: 415px) {
+  .jauge {
+    height: 1rem;
+  }
+}

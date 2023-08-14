@@ -1,38 +1,185 @@
-.App {
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --dark: #303030;
+  --light: #f7f7f7;
+  --cta-light: #cdcdcd;
+  --cta-dark: #454545;
+  --button-light: var(--cta-light);
+  --button-dark: var(--cta-dark);
+  --select-light: var(--cta-light);
+  --select-dark: var(--cta-dark);
+  --card-dark: #1a1a1a;
+  --card-light: #e8e8e8;
+  --bg-title-light: white;
+  --bg-title-dark: var(--card-dark);
+  --padding-app: 0.9rem;
+  color: var(--dark);
+  background-color: var(--light);
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  padding: var(--padding-app) var(--padding-app) 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form {
+  display: flex;
+}
+
+.header-input {
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+  width: 8rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.header-input::placeholder {
+  font-style: italic;
+}
+
+.header-input-warning {
+  padding: 0 1.8rem 0 0.5rem;
+}
+
+.input-container {
+  display: flex;
   align-items: center;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.warning-icon {
+  position: absolute;
+  right: 0.5rem;
+}
+
+.header-left {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: flex-end;
+}
+
+.upload-movie {
+  margin-right: 1rem;
+}
+
+.title {
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.header-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-right button {
+  margin: 0.5rem 0;
+}
+
+.header-right button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.sticky-block {
+  background-color: var(--light);
+  padding: 1rem 0;
+  position: sticky;
+  z-index: 2;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.category-reload-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1rem;
+}
+
+.text-select {
+  margin-right: 0.5rem;
+}
+
+button,
+select {
+  appearance: none;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--cta-light);
+  color: var(--cta-dark); /* ios fix */
+  border: 0;
+  cursor: pointer;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+button[disabled] {
+  cursor: not-allowed;
+  color: gray; /* ios fix */
 }
 
-.App-link {
-  color: #61dafb;
+.movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.error {
+  color: red;
+}
+
+.info {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--light);
+    background-color: var(--dark);
   }
-  to {
-    transform: rotate(360deg);
+  button,
+  select {
+    background-color: var(--cta-dark);
+    color: var(--cta-light); /* ios fix */
+  }
+  .sticky-block {
+    background-color: var(--dark);
+  }
+}
+
+@media (min-width: 415px) {
+  :root {
+    --padding-app: 1rem;
   }
 }

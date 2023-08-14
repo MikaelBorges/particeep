@@ -1,0 +1,145 @@
+.headerCardButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  background: yellow;
+  border-radius: 1rem;
+  padding: 0.1rem 0.5rem;
+  color: var(--dark);
+  font-size: 0.7rem;
+}
+
+.numberLikeDislike {
+  margin-left: 0.2rem;
+}
+
+.liked {
+  color: green;
+}
+.disliked {
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+.headerCard,
+.footerCard {
+  z-index: 1;
+}
+
+.titleCard {
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--bg-title-light);
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.imageContainer {
+  width: 4.5rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image {
+  top: 0;
+  left: 0;
+}
+
+.cardContainer {
+  /* margin: 1rem; */
+  margin: 0.5rem;
+  width: 7rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--card-light);
+  height: 10rem;
+}
+
+.removeButton {
+  background-color: red;
+  color: white;
+  padding: 0.3rem 0.3rem;
+  font-size: 0.4rem;
+}
+
+.card button {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.6rem;
+}
+
+.titleUnderMovie {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: var(--card-dark);
+  }
+
+  .titleCard {
+    background-color: var(--bg-title-dark);
+  }
+}
+
+@media (min-width: 415px) {
+  .card {
+    height: 18rem;
+    padding: 1rem;
+  }
+
+  .cardContainer {
+    width: 12rem;
+    margin: 2rem 1rem;
+  }
+
+  .category {
+    font-size: 1rem;
+  }
+
+  .removeButton {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  .card button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  .titleCard {
+    font-size: 1.5rem;
+  }
+
+  .numberLikeDislike {
+    margin-left: 0.5rem;
+  }
+
+  .titleUnderMovie {
+    font-size: 1.2rem;
+  }
+}
