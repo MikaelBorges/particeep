@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import moviesReducer from "./moviesSlice";
+import { rootReducer } from "./reducers";
 
 const loadFromLocalStorage = () => {
   const moviesRetrieved = JSON.parse(localStorage.getItem("movies"));
@@ -7,8 +7,7 @@ const loadFromLocalStorage = () => {
 };
 
 export const store = configureStore({
-  reducer: {
-    movies: moviesReducer,
-  },
+  reducer: rootReducer,
   preloadedState: loadFromLocalStorage(),
+  devTools: process.env.NODE_ENV !== "production",
 });

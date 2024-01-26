@@ -1,18 +1,18 @@
-import { useState } from "react";
-import "./App.css";
-import { useDispatch } from "react-redux";
-import { setMovies, removeMovie, likeMovie, dislikeMovie, addMovie, removeAllMovies } from "./slices/moviesSlice";
-import { MovieCard } from "./components/movieCard/movieCard";
-import { SelectCategory } from "./components/selectCategory/selectCategory";
-import { SelectRangePage } from "./components/selectRangePage/selectRangePage";
-import { Pagination } from "./components/pagination/pagination";
 import { motion } from "framer-motion";
-import { BEGIN_PATH, API_KEY } from "./config";
-import { TbReload } from "react-icons/tb";
+import { useState } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { PiWarningDuotone } from "react-icons/pi";
+import { TbReload } from "react-icons/tb";
+import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import "./App.css";
+import { MovieCard } from "./components/movieCard/movieCard";
+import { Pagination } from "./components/pagination/pagination";
+import { SelectCategory } from "./components/selectCategory/selectCategory";
+import { SelectRangePage } from "./components/selectRangePage/selectRangePage";
+import { API_KEY, BEGIN_PATH } from "./config";
 import { useGetMovies } from "./hooks/useGetMovies";
+import { addMovie, dislikeMovie, likeMovie, removeAllMovies, removeMovie, setMovies } from "./redux/slices/moviesSlice";
 
 const defaultRange = 4;
 

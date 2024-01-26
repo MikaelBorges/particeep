@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 /* import "./index.css"; */
-import "./reset.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./errorPage";
 import { Provider } from "react-redux";
-import { store } from "./slices/store";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import ErrorPage from "./errorPage";
+import { store } from "./redux/store";
+import reportWebVitals from "./reportWebVitals";
+import "./reset.css";
 
 const router = createBrowserRouter([
   {
@@ -17,9 +17,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
     <Provider store={store}>

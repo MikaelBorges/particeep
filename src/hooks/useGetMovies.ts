@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { movies$ } from "../api/movies";
-import { useSelector, useDispatch } from "react-redux";
-import { selectMovies, setMovies } from "../slices/moviesSlice";
 import { Movie } from "../api/moviesType";
-import { BEGIN_PATH, API_KEY } from "../config";
+import { API_KEY, BEGIN_PATH } from "../config";
+import { selectMovies, setMovies } from "../redux/slices/moviesSlice";
 
 export function useGetMovies() {
   const dispatch = useDispatch();

@@ -1,8 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
+import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { store } from "./slices/store";
-import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createMemoryRouter } from "react-router-dom";
+import App from "./App";
+import { store } from "./redux/store";
 
 const router = createMemoryRouter([
   {
